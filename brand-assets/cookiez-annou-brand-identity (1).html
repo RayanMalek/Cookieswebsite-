@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookiez'Annou — Brand Identity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=Syne+Mono&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --brown-900: #1a0a04;
+  --brown-800: #2e1006;
+  --brown-700: #4a1a0a;
+  --brown-600: #6b2810;
+  --brown-400: #9e4a22;
+  --cream-100: #fdf6ee;
+  --cream-200: #f5e6ce;
+  --cream-300: #e8cfa8;
+  --gold:       #c9963a;
+  --gold-light: #e8b96a;
+  --white:      #ffffff;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; }
+
+body {
+  background: var(--cream-100);
+  color: var(--brown-900);
+  font-family: 'Syne', sans-serif;
+}
+
+/* ── COVER ── */
+.cover {
+  height: 100vh;
+  background: var(--brown-900);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-grid-lines {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.cover-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5rem;
+  position: relative; z-index: 1;
+}
+
+.cover-eyebrow {
+  font-family: 'Syne Mono', monospace;
+  font-size: .72rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex; align-items: center; gap: 1rem;
+}
+.cover-eyebrow::before {
+  content: '';
+  width: 32px; height: 1px;
+  background: var(--gold);
+}
+
+.cover-wordmark {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(4.5rem, 9vw, 9rem);
+  line-height: .95;
+  color: var(--cream-100);
+  letter-spacing: -.02em;
+}
+.cover-wordmark em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.cover-sub {
+  font-family: 'Syne Mono', monospace;
+  font-size: .75rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--cream-200);
+  opacity: .45;
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 1.4rem;
+  width: 100%;
+}
+
+.cover-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative; z-index: 1;
+}
+.cover-footer-label {
+  font-family: 'Syne Mono', monospace;
+  font-size: .7rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--cream-100);
+  opacity: .25;
+}
+.cover-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--cream-100);
+  opacity: .2;
+}
+
+/* ── SHARED SECTION ── */
+.section {
+  padding: 7rem 4rem;
+  border-bottom: 1px solid var(--cream-300);
+}
+.section-dark {
+  background: var(--brown-800);
+  color: var(--cream-100);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5rem;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1.2rem;
+  opacity: .25;
+}
+.section-num {
+  font-family: 'Syne Mono', monospace;
+  font-size: .68rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+.section-title-sm {
+  font-family: 'Syne Mono', monospace;
+  font-size: .68rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+/* ── LOGO SECTION ── */
+.logo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+}
+.logo-cell {
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  min-height: 280px;
+  position: relative;
+}
+.logo-cell-label {
+  position: absolute;
+  bottom: 1.5rem; left: 2rem;
+  font-family: 'Syne Mono', monospace;
+  font-size: .62rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  opacity: .3;
+}
+
+.logo-cell.bg-cream  { background: var(--cream-100); }
+.logo-cell.bg-brown  { background: var(--brown-900); }
+.logo-cell.bg-gold   { background: var(--gold); }
+
+.logo-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: -.01em;
+  line-height: 1;
+}
+.logo-mark.sz-lg { font-size: 3.2rem; }
+
+.logo-wordmark {
+  display: flex; flex-direction: column; align-items: center; gap: .3rem;
+}
+.logo-wordmark-main {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.logo-wordmark-sub {
+  font-family: 'Syne Mono', monospace;
+  font-size: .55rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  opacity: .5;
+}
+
+.logo-cell.bg-cream .logo-mark,
+.logo-cell.bg-cream .logo-wordmark-main { color: var(--brown-900); }
+.logo-cell.bg-cream .logo-divider { background: var(--brown-900); }
+
+.logo-cell.bg-brown .logo-mark,
+.logo-cell.bg-brown .logo-wordmark-main { color: var(--cream-100); }
+.logo-cell.bg-brown .logo-divider { background: var(--cream-100); }
+
+.logo-cell.bg-gold .logo-mark,
+.logo-cell.bg-gold .logo-wordmark-main { color: var(--brown-900); }
+.logo-cell.bg-gold .logo-divider { background: var(--brown-900); }
+
+.logo-divider {
+  width: 30px; height: 1px;
+  margin: .4rem 0;
+}
+
+/* ── COLOUR PALETTE ── */
+.palette {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 320px;
+  margin-bottom: 4rem;
+}
+.swatch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.4rem 1rem;
+  transition: flex .4s ease;
+  cursor: default;
+}
+.swatch:hover { flex: 2.5; }
+
+.swatch-name {
+  font-family: 'Syne', sans-serif;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: .25rem;
+}
+.swatch-hex {
+  font-family: 'Syne Mono', monospace;
+  font-size: .62rem;
+  letter-spacing: .1em;
+  opacity: .55;
+}
+
+.swatch.dark .swatch-name,
+.swatch.dark .swatch-hex { color: var(--cream-100); }
+.swatch.light .swatch-name,
+.swatch.light .swatch-hex { color: var(--brown-900); }
+
+.colour-roles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.colour-role {
+  display: flex; align-items: flex-start; gap: 1.2rem;
+}
+.colour-role-chip {
+  width: 14px; height: 14px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.colour-role-name {
+  font-family: 'Syne', sans-serif;
+  font-size: .8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: .3rem;
+  color: var(--brown-900);
+}
+.colour-role-desc {
+  font-size: .8rem;
+  color: var(--brown-600);
+  line-height: 1.5;
+}
+
+/* ── TYPOGRAPHY ── */
+.type-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+.type-block { display: flex; flex-direction: column; gap: 2rem; }
+
+.type-specimen-lg {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 5vw, 6rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.02em;
+  color: var(--brown-900);
+}
+.type-specimen-lg em { font-style: italic; color: var(--gold); }
+
+.type-label {
+  font-family: 'Syne Mono', monospace;
+  font-size: .62rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--brown-600);
+  opacity: .5;
+  border-top: 1px solid var(--cream-300);
+  padding-top: .8rem;
+}
+.type-name {
+  font-family: 'Syne', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--brown-700);
+  margin-bottom: .2rem;
+}
+.type-style-row {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+.type-style-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--cream-200);
+  padding-bottom: .6rem;
+}
+.type-style-sample { color: var(--brown-900); }
+.type-style-spec {
+  font-family: 'Syne Mono', monospace;
+  font-size: .62rem;
+  color: var(--brown-400);
+  opacity: .6;
+  letter-spacing: .08em;
+}
+
+.type-sample-display {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+}
+.type-sample-ui {
+  font-family: 'Syne', sans-serif;
+}
+.type-sample-mono {
+  font-family: 'Syne Mono', monospace;
+}
+
+/* ── VOICE & TONE ── */
+.tone-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.tone-cell {
+  padding: 3.5rem 2.5rem;
+  background: var(--brown-700);
+  position: relative;
+}
+.tone-cell:nth-child(2) { background: var(--brown-600); }
+.tone-cell:nth-child(3) { background: var(--brown-800); }
+.tone-cell:nth-child(4) { background: var(--gold); }
+.tone-cell:nth-child(4) .tone-word,
+.tone-cell:nth-child(4) .tone-desc { color: var(--brown-900); }
+
+.tone-num {
+  font-family: 'Syne Mono', monospace;
+  font-size: .6rem;
+  letter-spacing: .18em;
+  color: rgba(255,255,255,.25);
+  margin-bottom: 2rem;
+  display: block;
+}
+.tone-cell:nth-child(4) .tone-num { color: rgba(0,0,0,.25); }
+
+.tone-word {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 2.8rem;
+  color: var(--cream-100);
+  line-height: 1;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+.tone-desc {
+  font-size: .8rem;
+  color: var(--cream-200);
+  opacity: .65;
+  line-height: 1.65;
+}
+
+/* ── DO / DON'T ── */
+.do-dont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+.do-cell, .dont-cell {
+  padding: 3rem;
+}
+.do-cell { background: rgba(201,150,58,.08); border: 1px solid rgba(201,150,58,.2); }
+.dont-cell { background: rgba(180,40,40,.05); border: 1px solid rgba(180,40,40,.12); }
+
+.cell-label {
+  font-family: 'Syne Mono', monospace;
+  font-size: .62rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  display: flex; align-items: center; gap: .7rem;
+}
+.cell-label::before {
+  content: '';
+  width: 20px; height: 1px;
+}
+.do-cell .cell-label { color: var(--gold); }
+.do-cell .cell-label::before { background: var(--gold); }
+.dont-cell .cell-label { color: #b42828; }
+.dont-cell .cell-label::before { background: #b42828; }
+
+.cell-list { list-style: none; display: flex; flex-direction: column; gap: .9rem; }
+.cell-list li {
+  font-size: .85rem;
+  line-height: 1.55;
+  color: var(--brown-700);
+  padding-left: 1.2rem;
+  position: relative;
+}
+.cell-list li::before {
+  content: '—';
+  position: absolute; left: 0;
+  opacity: .4;
+}
+
+/* ── DESIGN ELEMENTS ── */
+.elements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.element-card {
+  background: var(--cream-200);
+  padding: 3rem 2.5rem;
+  display: flex; flex-direction: column; gap: 2rem;
+}
+.element-preview {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 120px;
+}
+.element-name {
+  font-family: 'Syne', sans-serif;
+  font-size: .8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--brown-900);
+  border-top: 1px solid var(--cream-300);
+  padding-top: 1rem;
+}
+.element-desc {
+  font-size: .78rem;
+  color: var(--brown-600);
+  line-height: 1.55;
+}
+
+/* wave preview */
+.wave-preview {
+  width: 100%;
+  position: relative;
+  height: 80px;
+  background: var(--brown-900);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.wave-preview::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 50px;
+  background: var(--cream-200);
+  clip-path: ellipse(60% 100% at 50% 100%);
+}
+
+/* button previews */
+.btn-preview { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.preview-btn-primary {
+  background: var(--brown-900);
+  color: var(--cream-100);
+  padding: .6rem 1.6rem;
+  border-radius: 50px;
+  font-family: 'Syne', sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.preview-btn-outline {
+  border: 1.5px solid var(--brown-900);
+  color: var(--brown-900);
+  padding: .6rem 1.6rem;
+  border-radius: 50px;
+  font-family: 'Syne', sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.preview-btn-gold {
+  background: var(--gold);
+  color: var(--brown-900);
+  padding: .6rem 1.6rem;
+  border-radius: 50px;
+  font-family: 'Syne', sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* tag preview */
+.tag-preview { display: flex; gap: .6rem; flex-wrap: wrap; align-items: center; }
+.preview-tag {
+  border: 1px solid rgba(74,26,10,.25);
+  border-radius: 50px;
+  padding: .3rem .9rem;
+  font-family: 'Syne Mono', monospace;
+  font-size: .65rem;
+  letter-spacing: .1em;
+  color: var(--brown-700);
+  text-transform: uppercase;
+}
+
+/* divider preview */
+.divider-preview {
+  display: flex; flex-direction: column; gap: .8rem; width: 100%;
+}
+.prev-divider {
+  height: 1px;
+  background: var(--brown-900);
+  position: relative;
+}
+.prev-divider::before {
+  content: '✦';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--cream-200);
+  padding: 0 .5rem;
+  font-size: .7rem;
+  color: var(--gold);
+  line-height: 0;
+}
+
+/* price badge preview */
+.price-badge-preview { display: flex; gap: .8rem; align-items: center; }
+.prev-badge {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--cream-100);
+  border: 2px solid var(--brown-900);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--brown-900);
+  line-height: 1;
+  box-shadow: 2px 2px 0 var(--brown-900);
+}
+.prev-badge sup { font-size: .5rem; }
+
+/* ── IMAGERY DIRECTION ── */
+.imagery-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2px;
+}
+.imagery-cell {
+  background: var(--brown-700);
+  min-height: 260px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.8rem;
+  overflow: hidden;
+}
+.imagery-cell::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,4,2,.8) 0%, transparent 60%);
+}
+.imagery-cell.style-1 { background: linear-gradient(135deg, #4a1a0a, #2e1006); }
+.imagery-cell.style-2 { background: linear-gradient(135deg, #6b2810, #3d1008); }
+.imagery-cell.style-3 { background: linear-gradient(135deg, #c9963a, #8b6120); }
+
+.imagery-label {
+  position: relative; z-index: 1;
+  font-family: 'Syne', sans-serif;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--cream-100);
+}
+.imagery-caption {
+  position: absolute;
+  top: 1.8rem; left: 1.8rem;
+  z-index: 1;
+  font-family: 'Syne Mono', monospace;
+  font-size: .58rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.3);
+}
+
+/* image texture overlay */
+.imagery-cell::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+  opacity: .5;
+  pointer-events: none;
+}
+
+/* ── CLOSING SLIDE ── */
+.closing {
+  height: 80vh;
+  background: var(--brown-900);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.closing::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.closing-eyebrow {
+  font-family: 'Syne Mono', monospace;
+  font-size: .7rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  position: relative; z-index: 1;
+}
+.closing-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(5rem, 12vw, 12rem);
+  line-height: .85;
+  color: var(--cream-100);
+  letter-spacing: -.03em;
+  position: relative; z-index: 1;
+}
+.closing-tagline {
+  font-family: 'Syne Mono', monospace;
+  font-size: .7rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--cream-100);
+  opacity: .25;
+  position: relative; z-index: 1;
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 1.4rem;
+  width: 220px;
+  text-align: center;
+}
+
+/* ── UTILITY ── */
+@media (max-width: 900px) {
+  .logo-grid { grid-template-columns: 1fr; }
+  .palette { grid-template-columns: repeat(4, 1fr); height: auto; }
+  .swatch { min-height: 120px; }
+  .type-showcase { grid-template-columns: 1fr; }
+  .tone-grid { grid-template-columns: 1fr 1fr; }
+  .do-dont { grid-template-columns: 1fr; }
+  .elements-grid { grid-template-columns: 1fr; }
+  .imagery-grid { grid-template-columns: 1fr; }
+  .colour-roles { grid-template-columns: 1fr; }
+  .section { padding: 4rem 2rem; }
+  .cover { padding: 2.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-grid-lines"></div>
+  <div class="cover-center">
+    <p class="cover-eyebrow">Brand Identity Guidelines — 2026</p>
+    <h1 class="cover-wordmark">
+      Cookiez<em>'</em><br>Annou
+    </h1>
+    <p class="cover-sub">Made with Love &nbsp;·&nbsp; Tunis, Tunisia &nbsp;·&nbsp; Gourmet Cookie Atelier</p>
+  </div>
+  <div class="cover-footer">
+    <span class="cover-footer-label">Confidential &nbsp;·&nbsp; Internal Use Only</span>
+    <span class="cover-year">2026</span>
+  </div>
+</div>
+
+
+<!-- 01 LOGO -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <span class="section-title-sm">Logo System</span>
+  </div>
+
+  <div class="logo-grid">
+    <!-- Primary — light bg -->
+    <div class="logo-cell bg-cream">
+      <div class="logo-wordmark">
+        <span class="logo-mark sz-lg" style="color:var(--brown-900)">Annou</span>
+        <div class="logo-divider" style="background:var(--brown-900)"></div>
+        <span class="logo-wordmark-main" style="color:var(--brown-900)">Cookiez'Annou</span>
+        <span class="logo-wordmark-sub" style="color:var(--brown-600)">Made with Love</span>
+      </div>
+      <span class="logo-cell-label" style="color:var(--brown-600)">Primary — Light background</span>
+    </div>
+
+    <!-- Reversed — dark bg -->
+    <div class="logo-cell bg-brown">
+      <div class="logo-wordmark">
+        <span class="logo-mark sz-lg" style="color:var(--cream-100)">Annou</span>
+        <div class="logo-divider" style="background:var(--cream-100)"></div>
+        <span class="logo-wordmark-main" style="color:var(--cream-100)">Cookiez'Annou</span>
+        <span class="logo-wordmark-sub" style="color:var(--cream-200)">Made with Love</span>
+      </div>
+      <span class="logo-cell-label" style="color:rgba(245,230,206,.3)">Reversed — Dark background</span>
+    </div>
+
+    <!-- Gold variant -->
+    <div class="logo-cell bg-gold">
+      <div class="logo-wordmark">
+        <span class="logo-mark sz-lg" style="color:var(--brown-900)">Annou</span>
+        <div class="logo-divider" style="background:var(--brown-900)"></div>
+        <span class="logo-wordmark-main" style="color:var(--brown-900)">Cookiez'Annou</span>
+        <span class="logo-wordmark-sub" style="color:var(--brown-700)">Made with Love</span>
+      </div>
+      <span class="logo-cell-label" style="color:rgba(26,10,4,.35)">Gold — Special occasions</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- 02 COLOUR -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <span class="section-title-sm">Colour Palette</span>
+  </div>
+
+  <div class="palette">
+    <div class="swatch dark" style="background:#1a0a04">
+      <span class="swatch-name">Espresso</span>
+      <span class="swatch-hex">#1A0A04</span>
+    </div>
+    <div class="swatch dark" style="background:#2e1006">
+      <span class="swatch-name">Bitter</span>
+      <span class="swatch-hex">#2E1006</span>
+    </div>
+    <div class="swatch dark" style="background:#4a1a0a">
+      <span class="swatch-name">Mahogany</span>
+      <span class="swatch-hex">#4A1A0A</span>
+    </div>
+    <div class="swatch dark" style="background:#6b2810">
+      <span class="swatch-name">Cacao</span>
+      <span class="swatch-hex">#6B2810</span>
+    </div>
+    <div class="swatch dark" style="background:#c9963a">
+      <span class="swatch-name">Caramel</span>
+      <span class="swatch-hex">#C9963A</span>
+    </div>
+    <div class="swatch light" style="background:#f5e6ce">
+      <span class="swatch-name">Biscuit</span>
+      <span class="swatch-hex">#F5E6CE</span>
+    </div>
+    <div class="swatch light" style="background:#fdf6ee">
+      <span class="swatch-name">Vanilla</span>
+      <span class="swatch-hex">#FDF6EE</span>
+    </div>
+  </div>
+
+  <div class="colour-roles">
+    <div class="colour-role">
+      <div class="colour-role-chip" style="background:#1a0a04"></div>
+      <div>
+        <div class="colour-role-name">Espresso — Primary</div>
+        <div class="colour-role-desc">Backgrounds, body text, heavy UI elements. The anchor of all compositions.</div>
+      </div>
+    </div>
+    <div class="colour-role">
+      <div class="colour-role-chip" style="background:#c9963a"></div>
+      <div>
+        <div class="colour-role-name">Caramel — Accent</div>
+        <div class="colour-role-desc">CTAs, highlights, price tags, hover states. Used sparingly for maximum impact.</div>
+      </div>
+    </div>
+    <div class="colour-role">
+      <div class="colour-role-chip" style="background:#f5e6ce"></div>
+      <div>
+        <div class="colour-role-name">Biscuit — Support</div>
+        <div class="colour-role-desc">Section backgrounds, cards, wave fills. Warm neutral to breathe between darks.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 03 TYPOGRAPHY -->
+<section class="section section-dark">
+  <div class="section-header" style="border-color:rgba(255,255,255,.15)">
+    <span class="section-num">03</span>
+    <span class="section-title-sm">Typography</span>
+  </div>
+
+  <div class="type-showcase">
+    <div class="type-block">
+      <div>
+        <div class="type-specimen-lg" style="color:var(--cream-100)">
+          Made with<br><em>love &</em><br>precision
+        </div>
+      </div>
+
+      <div>
+        <div class="type-name" style="color:var(--gold)">Cormorant Garamond</div>
+        <div class="type-label" style="border-color:rgba(255,255,255,.1);color:rgba(245,230,206,.4)">Display · Headings · Pull quotes</div>
+      </div>
+    </div>
+
+    <div class="type-block">
+      <div class="type-style-row">
+        <div class="type-style-item" style="border-color:rgba(255,255,255,.07)">
+          <span class="type-style-sample type-sample-display" style="font-size:2.2rem;color:var(--cream-100);font-weight:300">Heading 1</span>
+          <span class="type-style-spec">Cormorant 300 · 72px · −0.02em</span>
+        </div>
+        <div class="type-style-item" style="border-color:rgba(255,255,255,.07)">
+          <span class="type-style-sample type-sample-display" style="font-size:1.6rem;color:var(--cream-100);font-style:italic">Heading 2</span>
+          <span class="type-style-spec">Cormorant Italic · 48px</span>
+        </div>
+        <div class="type-style-item" style="border-color:rgba(255,255,255,.07)">
+          <span class="type-style-sample type-sample-ui" style="font-size:1rem;color:var(--cream-200);font-weight:600">Section Title</span>
+          <span class="type-style-spec">Syne 600 · 18px · uppercase</span>
+        </div>
+        <div class="type-style-item" style="border-color:rgba(255,255,255,.07)">
+          <span class="type-style-sample type-sample-ui" style="font-size:.85rem;color:var(--cream-200);font-weight:400">Body copy — clean and refined.</span>
+          <span class="type-style-spec">Syne 400 · 14px · 1.7lh</span>
+        </div>
+        <div class="type-style-item" style="border-color:rgba(255,255,255,.07)">
+          <span class="type-style-sample type-sample-mono" style="font-size:.7rem;color:var(--gold);letter-spacing:.18em;text-transform:uppercase">Label / Caption</span>
+          <span class="type-style-spec">Syne Mono · 11px · 0.18em</span>
+        </div>
+        <div class="type-style-item" style="border-color:rgba(255,255,255,.07)">
+          <span class="type-style-sample type-sample-display" style="font-size:2.8rem;color:var(--gold);font-weight:600">12<sup style="font-size:1rem">dt</sup></span>
+          <span class="type-style-spec">Cormorant 600 · Price display</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="type-name" style="color:var(--gold)">Syne + Syne Mono</div>
+        <div class="type-label" style="border-color:rgba(255,255,255,.1);color:rgba(245,230,206,.4)">UI · Body · Labels · Captions</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 04 VOICE & TONE -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <span class="section-title-sm">Voice &amp; Tone</span>
+  </div>
+
+  <div class="tone-grid">
+    <div class="tone-cell">
+      <span class="tone-num">01</span>
+      <span class="tone-word">Artisan</span>
+      <p class="tone-desc">Every product is crafted by hand. The language reflects skill, intention, and care — never mass-produced.</p>
+    </div>
+    <div class="tone-cell">
+      <span class="tone-num">02</span>
+      <span class="tone-word">Intimate</span>
+      <p class="tone-desc">Cookiez'Annou is a personal brand. It speaks warmly, like a recommendation from someone you trust completely.</p>
+    </div>
+    <div class="tone-cell">
+      <span class="tone-num">03</span>
+      <span class="tone-word">Refined</span>
+      <p class="tone-desc">Premium without pretension. The copy is confident, precise, and never over-explains or oversells.</p>
+    </div>
+    <div class="tone-cell">
+      <span class="tone-num">04</span>
+      <span class="tone-word">Sensory</span>
+      <p class="tone-desc">Descriptions should evoke smell, texture, and warmth — not just list ingredients. Make them feel it before they taste it.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 05 USAGE -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <span class="section-title-sm">Usage — Do &amp; Don't</span>
+  </div>
+
+  <div class="do-dont">
+    <div class="do-cell">
+      <div class="cell-label">Do</div>
+      <ul class="cell-list">
+        <li>Use Cormorant Garamond for all large-format display text and product names.</li>
+        <li>Pair dark backgrounds with cream or gold typography only.</li>
+        <li>Let white space breathe — generous margins signal premium positioning.</li>
+        <li>Use the wave motif as a structural divider between sections.</li>
+        <li>Display prices in Cormorant Garamond with the "dt" superscript convention.</li>
+        <li>Keep photography warm-toned, close-up, and slightly dimmed at the edges.</li>
+        <li>Write product names in their original mixed-language form (e.g. Tiramicoo, Flankie).</li>
+      </ul>
+    </div>
+    <div class="dont-cell">
+      <div class="cell-label">Don't</div>
+      <ul class="cell-list">
+        <li>Never use the logo on busy photographic backgrounds without a darkening overlay.</li>
+        <li>Never use more than two typefaces in a single layout.</li>
+        <li>Avoid bright, saturated colours outside the defined palette.</li>
+        <li>Do not use all-caps for body copy — only for labels and eyebrows.</li>
+        <li>Never stretch, rotate, or apply drop shadows to the wordmark.</li>
+        <li>Avoid generic stock imagery — always use real, in-house product photography.</li>
+        <li>Do not add decorative elements (stars, sparkles) — the wave and dot motifs are sufficient.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- 06 ELEMENTS -->
+<section class="section section-dark">
+  <div class="section-header" style="border-color:rgba(255,255,255,.15)">
+    <span class="section-num">06</span>
+    <span class="section-title-sm">UI Elements</span>
+  </div>
+
+  <div class="elements-grid">
+    <div class="element-card">
+      <div class="element-preview">
+        <div class="btn-preview">
+          <span class="preview-btn-primary">Order Now</span>
+          <span class="preview-btn-gold">Menu</span>
+          <span class="preview-btn-outline">Our Story</span>
+        </div>
+      </div>
+      <div>
+        <div class="element-name">Buttons</div>
+        <div class="element-desc">Always pill-shaped (border-radius: 50px). Three variants: primary dark, gold accent, ghost outline. Syne 600, uppercase, 0.08em tracking.</div>
+      </div>
+    </div>
+
+    <div class="element-card">
+      <div class="element-preview">
+        <div class="price-badge-preview">
+          <div class="prev-badge">8<sup>dt</sup></div>
+          <div class="prev-badge" style="border-color:var(--gold);box-shadow:2px 2px 0 var(--gold)">12<sup>dt</sup></div>
+          <div class="prev-badge" style="background:var(--brown-900);color:var(--cream-100);border-color:var(--cream-100);box-shadow:2px 2px 0 var(--cream-100)">14<sup>dt</sup></div>
+        </div>
+      </div>
+      <div>
+        <div class="element-name">Price Badges</div>
+        <div class="element-desc">Circular badge, 2px offset shadow, Cormorant Garamond 600. "dt" in superscript. Light, gold, and dark variants for different backgrounds.</div>
+      </div>
+    </div>
+
+    <div class="element-card">
+      <div class="element-preview">
+        <div class="tag-preview">
+          <span class="preview-tag">NYC Cookie</span>
+          <span class="preview-tag">Gluten Free</span>
+          <span class="preview-tag">Best Seller</span>
+        </div>
+      </div>
+      <div>
+        <div class="element-name">Category Tags</div>
+        <div class="element-desc">Pill shape, 1px border, Syne Mono, 0.1em tracking. Transparent background — tinted only on hover states.</div>
+      </div>
+    </div>
+
+    <div class="element-card">
+      <div class="element-preview">
+        <div class="wave-preview"></div>
+      </div>
+      <div>
+        <div class="element-name">Wave Motif</div>
+        <div class="element-desc">Organic wave used as section transition. Always flows between Espresso (dark) and Biscuit/Vanilla (light) sections. Never applied decoratively inside a layout.</div>
+      </div>
+    </div>
+
+    <div class="element-card">
+      <div class="element-preview">
+        <div class="divider-preview">
+          <div class="prev-divider"></div>
+          <div class="prev-divider"></div>
+        </div>
+      </div>
+      <div>
+        <div class="element-name">Section Dividers</div>
+        <div class="element-desc">Thin 1px horizontal rules with optional centred gold star accent. Used in menus and section headers to create breathing room without visual weight.</div>
+      </div>
+    </div>
+
+    <div class="element-card" style="background:var(--brown-900)">
+      <div class="element-preview">
+        <div style="font-family:'Syne Mono',monospace;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);">
+          — Handcrafted Daily<br><br>
+          <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;color:var(--cream-100);letter-spacing:0">A warm cookie &<br>a creamy filling.</span>
+        </div>
+      </div>
+      <div>
+        <div class="element-name" style="color:var(--cream-100);border-color:rgba(255,255,255,.1)">Eyebrow + Headline</div>
+        <div class="element-desc" style="color:var(--cream-200)">Syne Mono label above Cormorant italic headline. The consistent pairing across all sections, cards, and marketing touchpoints.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 07 IMAGERY -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <span class="section-title-sm">Imagery Direction</span>
+  </div>
+
+  <div class="imagery-grid">
+    <div class="imagery-cell style-1">
+      <span class="imagery-caption">Hero / Feature</span>
+      <span class="imagery-label">Textural &amp; Immersive</span>
+    </div>
+    <div class="imagery-cell style-2">
+      <span class="imagery-caption">Product</span>
+      <span class="imagery-label">Warm &amp; Close-up</span>
+    </div>
+    <div class="imagery-cell style-3">
+      <span class="imagery-caption">Accent</span>
+      <span class="imagery-label">Gold Tone</span>
+    </div>
+  </div>
+
+  <div class="colour-roles" style="margin-top:3rem">
+    <div class="colour-role">
+      <div class="colour-role-chip" style="background:var(--brown-700)"></div>
+      <div>
+        <div class="colour-role-name">Mood</div>
+        <div class="colour-role-desc">Warm, moody, and intimate. Shoot against dark or neutral surfaces. No bright daylight photography.</div>
+      </div>
+    </div>
+    <div class="colour-role">
+      <div class="colour-role-chip" style="background:var(--gold)"></div>
+      <div>
+        <div class="colour-role-name">Focus</div>
+        <div class="colour-role-desc">Always product-first. Extreme close-up on texture, cross-sections, melted fillings. Show the craft.</div>
+      </div>
+    </div>
+    <div class="colour-role">
+      <div class="colour-role-chip" style="background:var(--cream-300)"></div>
+      <div>
+        <div class="colour-role-name">Post-processing</div>
+        <div class="colour-role-desc">Slight warm grade (+10 temp), reduced highlights, vignette edge darkening. Consistent across all product shots.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CLOSING -->
+<div class="closing">
+  <span class="closing-eyebrow">Cookiez'Annou · Made with Love</span>
+  <div class="closing-mark">Annou</div>
+  <p class="closing-tagline">Brand Identity Guidelines · 2026</p>
+</div>
+
+</body>
+</html>
